@@ -30,3 +30,6 @@ build/
 # Tests / tools
 .tox/
 .coverage*
+
+*.Identifier
+*Zone.Identifier
