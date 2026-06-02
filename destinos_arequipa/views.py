@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+//Vista para la pagina de inicio, se renderiza el template index.html
+def index (request):
+    return render(request, "destinos_arequipa/index.html")
