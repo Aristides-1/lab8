@@ -95,7 +95,7 @@
 			<div class="owl-carousel owl-theme home_slider">
 
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -177,7 +177,7 @@
 
 
 	<div class="intro">
-		<div class="intro_background" style="background-image:url(images/intro.png)"></div>
+		<div class="intro_background" style="background-image:url({% static 'images/intro.png' %})"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -240,8 +240,8 @@
 								<img src="{% static 'images/destination_1.jpg' %}" alt="">
 
 								{% if destino.ofertaTour %}
-									<div class="spec_offer"
-										Special Offer
+									<div class="spec_offer text-center">
+										<a href="#">Special Offer</a>
 									</div>
 								{% endif %}
 									
@@ -264,7 +264,7 @@
 
 
 	<div class="testimonials" id="testimonials">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/testimonials.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
@@ -391,7 +391,7 @@
 
 				<div class="col-xl-4">
 					<div class="travello">
-						<div class="background_image" style="background-image:url(images/travello.jpg)"></div>
+						<div class="background_image" style="background-image:url({% static 'images/travello.jpg' %})"></div>
 						<div class="travello_content">
 							<div class="travello_content_inner">
 								<div></div>
@@ -415,7 +415,7 @@
 	
 
 	<footer class="footer">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer_1.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
