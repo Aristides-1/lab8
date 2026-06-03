@@ -1,6 +1,14 @@
 from django.shortcuts import render
 
+from .models import DestinoTuristico
 
-#Vista para la pagina de inicio, se renderiza el template index.html
-def index (request):
-    return render(request, "index.html", {'price': 100})
+def index(request):
+    destinos = DestinoTuristico.objects.all()
+
+    return render(
+        request,
+        "index.html",
+        {
+            "destinos": destinos
+        }
+    )
