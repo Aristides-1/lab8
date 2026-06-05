@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar destino</title>
+</head>
+<body>
+
+    <h2>Eliminar destino</h2>
+
+    <p>
+        ¿Desea eliminar
+        <strong>{{ destino.nombreCiudad }}</strong>?
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">
+            Sí, eliminar
+        </button>
+    </form>
+
+    <br>
+
+    <a href="{% url 'index' %}">
+        Cancelar
+    </a>
+
+</body>
+</html>
