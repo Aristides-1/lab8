@@ -234,26 +234,41 @@
 				<div class="col">
 					<div class="destinations_container item_grid">
 
-						{% for destino in destinos %}
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg' %}" alt="">
+								{% for destino in destinos %}
 
-								{% if destino.ofertaTour %}
-									<div class="spec_offer text-center">
-										<a href="#">Special Offer</a>
+									<div class="destination item">
+
+										<div class="destination_image">
+
+											<img src="{{ destino.imagenCiudad.url }}" alt="">
+
+											{% if destino.ofertaTour %}
+											<div class="spec_offer text-center">
+												<a href="#">Oferta</a>
+											</div>
+											{% endif %}
+
+										</div>
+
+										<div class="destination_content">
+
+											<div class="destination_title">
+												{{ destino.nombreCiudad }}
+											</div>
+
+											<div class="destination_subtitle">
+												<p>{{ destino.descripcionCiudad }}</p>
+											</div>
+
+											<div class="destination_price">
+												S/. {{ destino.precioTour }}
+											</div>
+
+										</div>
+
 									</div>
-								{% endif %}
-									
-								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Bali</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From ${{price}}</div>
-							</div>
-						</div>
-						{% endfor %}
+
+								{% endfor %}
 						
 
 					</div>
