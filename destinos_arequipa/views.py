@@ -79,6 +79,7 @@ def editar_destino(request, id):
     )
 
 
+
 def eliminar_destino(request, id):
 
     destino = get_object_or_404(
@@ -86,6 +87,14 @@ def eliminar_destino(request, id):
         id=id
     )
 
-    destino.delete()
+    if request.method == "POST":
+        destino.delete()
+        return redirect("index")
 
-    return redirect("index")
+    return render(
+        request,
+        "confirmar_eliminacion.html",
+        {
+            "destino": destino
+        }
+    )
